@@ -158,7 +158,9 @@ public class RadioTest {
     @Test
     public void maxIncreaseVolume() {
         Radio station = new Radio();
-        station.increaseVolume(10);
+        station.setVolume(10);
+
+        station.increaseVolume();
 
         int excpected = 10;
         int actual = station.getIncreaseVolume();
@@ -170,7 +172,9 @@ public class RadioTest {
     @Test
     public void actualIncreaseVolume() {
         Radio station = new Radio();
-        station.increaseVolume(5);
+        station.setVolume(5);
+
+        station.increaseVolume();
 
         int excpected = 6;
         int actual = station.getIncreaseVolume();
@@ -184,7 +188,9 @@ public class RadioTest {
     @Test
     public void minReduceVolume() {
         Radio station = new Radio();
-        station.reduceVolume(0);
+        station.setVolume(0);
+
+        station.reduceVolume();
 
         int excpected = 0;
         int actual = station.getReduceVolume();
@@ -196,7 +202,9 @@ public class RadioTest {
     @Test
     public void minEqualsReduceVolume() {
         Radio station = new Radio();
-        station.reduceVolume(-1);
+        station.setVolume(-1);
+
+        station.reduceVolume();
 
         int excpected = 0;
         int actual = station.getReduceVolume();
@@ -208,7 +216,9 @@ public class RadioTest {
     @Test
     public void actualReduceVolume() {
         Radio station = new Radio();
-        station.reduceVolume(4);
+        station.setVolume(4);
+
+        station.reduceVolume();
 
         int excpected = 3;
         int actual = station.getReduceVolume();
@@ -221,7 +231,9 @@ public class RadioTest {
     @Test
     public void maxEqualReduceVolume() {
         Radio station = new Radio();
-        station.reduceVolume(10);
+        station.setVolume(10);
+
+        station.reduceVolume();
 
         int excpected = 9;
         int actual = station.getReduceVolume();
@@ -231,16 +243,5 @@ public class RadioTest {
 
     }
 
-    @Test
-    public void maxReduceVolume() {
-        Radio station = new Radio();
-        station.reduceVolume(11);
 
-        int excpected = 10;
-        int actual = station.getReduceVolume();
-
-        Assertions.assertEquals(excpected, actual);
-
-
-    }
 }

@@ -1,7 +1,40 @@
 package ru.netology.radio;
 
 public class Radio {
-    public int radioStation;
+    private int radioStation;
+    private int volume;
+
+    public int getCurrentRadioStation() {
+        return radioStation;
+    }
+
+    public int getNextRadio() {
+        return radioStation;
+    }
+
+
+    public int getPrevtRadio() {
+        return radioStation;
+    }
+
+    public int getIncreaseVolume() {
+        return volume;
+    }
+
+    public int getReduceVolume() {
+        return volume;
+    }
+
+    public void setVolume(int CurrentVolume) {
+
+        if (CurrentVolume < 0) {
+            return;
+        }
+        if (CurrentVolume > 10) {
+            return;
+        }
+        volume = CurrentVolume;
+    }
 
     public void setRadioStation(int CurrentRadioStation) {
         if (CurrentRadioStation < 0) {
@@ -13,10 +46,6 @@ public class Radio {
         radioStation = CurrentRadioStation;
     }
 
-    public int getCurrentRadioStation() {
-
-        return radioStation;
-    }
 
     //_________________________________
 
@@ -30,12 +59,6 @@ public class Radio {
         return radioStation;
     }
 
-    public int getNextRadio() {
-        return radioStation;
-    }
-
-
-    //____________________________________
 
     public int prevRadio(int newStantion) {
 
@@ -55,16 +78,9 @@ public class Radio {
         return radioStation;
     }
 
-    public int getPrevtRadio() {
-        return radioStation;
-    }
 
-    //_______________________________________
-
-    public int volume;
-
-
-    public int increaseVolume(int volumeLevel) {
+    public int increaseVolume() {
+        int volumeLevel = volume;
         if (volumeLevel < 10) {
             volumeLevel++;
         } else {
@@ -74,13 +90,10 @@ public class Radio {
         return volume;
     }
 
-    public int getIncreaseVolume() {
-        return volume;
-    }
-
 
     //___________________________________________
-    public void reduceVolume(int minvolumeLevel) {
+    public void reduceVolume() {
+        int minvolumeLevel = volume;
 
         if (minvolumeLevel <= 0) {
             return;
@@ -94,10 +107,6 @@ public class Radio {
         }
         volume = minvolumeLevel;
 
-    }
-
-    public int getReduceVolume() {
-        return volume;
     }
 
 
