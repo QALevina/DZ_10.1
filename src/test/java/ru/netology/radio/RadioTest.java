@@ -168,6 +168,7 @@ public class RadioTest {
         Assertions.assertEquals(excpected, actual);
 
     }
+
     @Test
     public void moreMaxIncreaseVolume() {
         Radio station = new Radio();
@@ -254,6 +255,7 @@ public class RadioTest {
 
 
     }
+
     @Test
     public void moreMaxEqualReduceVolume() {
         Radio station = new Radio();

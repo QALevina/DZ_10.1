@@ -20,10 +20,10 @@ public class Radio {
     public int getIncreaseVolume() {
         return volume;
     }
+
     public int getReduceVolume() {
         return volume;
     }
-
 
 
     public void setVolume(int CurrentVolume) {
@@ -104,7 +104,7 @@ public class Radio {
         if (minvolumeLevel <= 10) {
             minvolumeLevel--;
         }
-             volume = minvolumeLevel;
+        volume = minvolumeLevel;
 
     }
 
