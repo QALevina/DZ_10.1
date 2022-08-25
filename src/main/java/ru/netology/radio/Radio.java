@@ -101,7 +101,10 @@ public class Radio {
             return;
         }
 
-        if (minvolumeLevel <= 10) {
+        if (minvolumeLevel < 10) {
+            minvolumeLevel--;
+        }
+        if (minvolumeLevel == 10) {
             minvolumeLevel--;
         }
         volume = minvolumeLevel;

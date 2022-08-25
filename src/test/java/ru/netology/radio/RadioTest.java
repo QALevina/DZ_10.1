@@ -225,6 +225,32 @@ public class RadioTest {
         Assertions.assertEquals(excpected, actual);
 
     }
+    @Test
+    public void minReduceVolumeLevel() {
+        Radio station = new Radio();
+        station.setVolume(5);
+
+        station.reduceVolume();
+
+        int excpected = 4;
+        int actual = station.getReduceVolume();
+
+        Assertions.assertEquals(excpected, actual);
+
+    }
+    @Test
+    public void minEqualReduceVolumeLevel() {
+        Radio station = new Radio();
+        station.setVolume(10);
+
+        station.reduceVolume();
+
+        int excpected = 9;
+        int actual = station.getReduceVolume();
+
+        Assertions.assertEquals(excpected, actual);
+
+    }
 
     @Test
     public void actualReduceVolume() {
@@ -244,7 +270,7 @@ public class RadioTest {
     @Test
     public void maxEqualReduceVolume() {
         Radio station = new Radio();
-        station.setVolume(10);
+        station.setVolume(11);
 
         station.reduceVolume();
 
@@ -270,6 +296,5 @@ public class RadioTest {
 
 
     }
-
 
 }
